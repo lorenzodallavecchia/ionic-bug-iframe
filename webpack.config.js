@@ -18,13 +18,10 @@ module.exports = {
             { test: /\.ts$/, exclude: /node_modules/, loader: "ts-loader" },
         ]
     },
-    devtool: "cheap-module-eval-source-map",
+    devtool: "eval-cheap-module-source-map",
     devServer: {
-        contentBase: __dirname,
-        watchContentBase: true,
-        overlay: {
-            errors: true,
-            warnings: false,
-        },
+		static: {
+			directory: __dirname,
+		},
     },
 };
